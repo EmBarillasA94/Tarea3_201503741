@@ -15,9 +15,10 @@ public class Usuarios {
     public Usuarios(){
     }
     
-    
     int nUsuarios;
+    String[] usuarios = new String[5];
     Scanner entrada = new Scanner(System.in);
+    
     void usuarios(){
         System.out.println("Menú de Usuarios");
         System.out.println("");
@@ -47,20 +48,51 @@ public class Usuarios {
                 break;
         }
     }
-
+    
     private void ingreso() {
-        Scanner ingreso = new Scanner(System.in);
-        String nombre;
+       
         System.out.println("Ingrese Usuario");
-        nombre=ingreso.nextLine();
+        Scanner ingreso= new Scanner(System.in);
+        String nombres;
+        for(int i=0; i<=4; i++){
+            System.out.print("Usuario"+(i+1)+": ");
+            nombres=ingreso.nextLine();
+            usuarios[i]=nombres;
+            nombres="";
+        }
+        System.out.println("Lista de Usuarios llena");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        usuarios();
     }
 
     private void mostrar() {
         System.out.println("Mostrar todos los Usuarios");
+        for(int j=0;j<=4;j++){
+            System.out.print("Usuario"+(j+1)+": ");
+            System.out.println(usuarios[j]);
+        }
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        usuarios();
     }
 
     private void personalizado() {
+        Scanner busqueda = new Scanner(System.in);
         System.out.println("Mostar un Usuario Personalizado");
         System.out.println("Ingrese Usuario");
+        String buscar="";
+        String encontrado="";
+        buscar=busqueda.nextLine();
+        for(int i=0;i<=4;i++){
+            if(usuarios[i].equals(buscar)){
+                encontrado=usuarios[i];
+                break;
+            }else{encontrado="ERROR!! No existe ningún usuario con esa coincidencia";}
+        }
+        System.out.println("Usuario");
+        System.out.println(encontrado);
     }
 }

@@ -31,6 +31,7 @@ public class Menu {
                 new Usuarios().usuarios();
                 break;
             case 2:
+                new Palindromo().palindromo();
                 break;
             case 3:
                 break;
