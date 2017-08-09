@@ -12,26 +12,31 @@ import java.util.Scanner;
  * @author Eddy Alejandro
  */
 public class Menu {
-    public Menu(){
+
+    public Menu() {
     }
     int decision;
-    void menu(){
-        System.out.println("Tarea 3");
-        System.out.println("");
-        System.out.println("201503741");
-        System.out.println("1. Usuarios");
-        System.out.println("2. Palabras Palindromas");
-        System.out.println("3. Salir");
-        
+
+    void menu() {
+        System.out.println("---------------------------------");
+        System.out.println("             Tarea 3             ");
+        System.out.println("                                 ");
+        System.out.println("            201503741            ");
+        System.out.println("                                 ");
+        System.out.println("       1. Usuarios               ");
+        System.out.println("       2. Palabras Palindromas   ");
+        System.out.println("       3. Salir                  ");
+        System.out.println("---------------------------------");
+
         Scanner entrada = new Scanner(System.in);
         decision = entrada.nextInt();
-        
-        switch(decision){
+
+        switch (decision) {
             case 1:
-                new Usuarios().usuarios();
+                new Usuarios().usuarios();//llamada al menu de usuarios
                 break;
             case 2:
-                new Palindromo().palindromo();
+                new Palindromo().palindromo();// llamada al menu de los palindromos
                 break;
             case 3:
                 break;

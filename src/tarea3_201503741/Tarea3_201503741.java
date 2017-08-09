@@ -16,6 +16,6 @@ public class Tarea3_201503741 {
      */
     public static void main(String[] args) {
         new Menu().menu(); //llamada a mi clase menu
-        }
-   
+    }
+
 }
